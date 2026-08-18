@@ -1527,4 +1527,12 @@ footer small {
     .timeline-item {
         padding-left: 65px;
     }
+    .profile-photo {
+    width: 85%;
+    height: 85%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    border: 4px solid rgba(255,255,255,.5);
+    }
                      }
