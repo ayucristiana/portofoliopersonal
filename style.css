@@ -1,3 +1,8 @@
+/* =========================================================
+   OCEAN PORTFOLIO - STYLE CSS
+   ========================================================= */
+
+
 /* =========================
    RESET
 ========================= */
@@ -58,13 +63,15 @@ body {
 
     border-radius: 50%;
 
-    background: rgba(255,255,210,.5);
+    background: rgba(255, 255, 210, 0.5);
 
     filter: blur(60px);
 }
 
 
-/* LIGHT RAYS */
+/* =========================
+   LIGHT RAYS
+========================= */
 
 .light-ray {
     position: absolute;
@@ -74,7 +81,7 @@ body {
     width: 180px;
     height: 1000px;
 
-    background: rgba(255,255,255,.1);
+    background: rgba(255, 255, 255, 0.1);
 
     filter: blur(12px);
 
@@ -100,12 +107,12 @@ body {
 @keyframes lightMove {
 
     from {
-        opacity: .15;
+        opacity: 0.15;
         transform: rotate(18deg);
     }
 
     to {
-        opacity: .55;
+        opacity: 0.55;
         transform: rotate(26deg);
     }
 
@@ -121,11 +128,11 @@ body {
 
     bottom: -80px;
 
-    border: 2px solid rgba(255,255,255,.45);
+    border: 2px solid rgba(255, 255, 255, 0.45);
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.04);
+    background: rgba(255, 255, 255, 0.04);
 
     animation: rise linear infinite;
 }
@@ -143,7 +150,7 @@ body {
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,.8);
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .bubble1 {
@@ -212,7 +219,7 @@ body {
     }
 
     10% {
-        opacity: .7;
+        opacity: 0.7;
     }
 
     50% {
@@ -297,7 +304,7 @@ body {
     top: 55%;
     left: -150px;
 
-    transform: scale(.7);
+    transform: scale(0.7);
 
     animation-duration: 25s;
     animation-delay: 4s;
@@ -340,11 +347,11 @@ body {
         50% 50%
         35% 35%;
 
-    background: rgba(215,143,255,.7);
+    background: rgba(215, 143, 255, 0.7);
 
     box-shadow:
         0 0 30px
-        rgba(210,140,255,.6);
+        rgba(210, 140, 255, 0.6);
 }
 
 .tentacles {
@@ -356,7 +363,7 @@ body {
     width: 6px;
     height: 75px;
 
-    background: rgba(210,145,255,.7);
+    background: rgba(210, 145, 255, 0.7);
 
     border-radius: 20px;
 
@@ -366,20 +373,21 @@ body {
 }
 
 .tentacles span:nth-child(2) {
-    animation-delay: .2s;
+    animation-delay: 0.2s;
 }
 
 .tentacles span:nth-child(3) {
-    animation-delay: .4s;
+    animation-delay: 0.4s;
 }
 
 .tentacles span:nth-child(4) {
-    animation-delay: .6s;
+    animation-delay: 0.6s;
 }
 
 @keyframes jelly {
 
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -460,7 +468,9 @@ body {
 }
 
 
-/* CORAL */
+/* =========================
+   CORAL
+========================= */
 
 .coral {
     position: absolute;
@@ -494,7 +504,8 @@ body {
 
 @keyframes coralFloat {
 
-    0%,100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
 
@@ -504,7 +515,9 @@ body {
 }
 
 
-/* SAND */
+/* =========================
+   SAND
+========================= */
 
 .sand {
     position: absolute;
@@ -545,12 +558,12 @@ nav {
     align-items: center;
     justify-content: space-between;
 
-    transition: .4s;
+    transition: 0.4s;
 }
 
 nav.scrolled {
     background:
-        rgba(0,25,45,.8);
+        rgba(0, 25, 45, 0.8);
 
     backdrop-filter: blur(15px);
 }
@@ -586,7 +599,7 @@ nav.scrolled {
 
     font-size: 13px;
 
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -648,7 +661,7 @@ nav.scrolled {
     font-size:
         clamp(55px, 8vw, 90px);
 
-    line-height: .95;
+    line-height: 0.95;
 
     margin: 25px 0;
 }
@@ -658,14 +671,14 @@ nav.scrolled {
 
     text-shadow:
         0 0 25px
-        rgba(100,235,255,.5);
+        rgba(100, 235, 255, 0.5);
 }
 
 .hero-text > p {
     max-width: 570px;
 
     color:
-        rgba(255,255,255,.82);
+        rgba(255, 255, 255, 0.82);
 
     line-height: 1.8;
 }
@@ -687,7 +700,7 @@ nav.scrolled {
 
     border-radius: 50px;
 
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .main-btn {
@@ -697,7 +710,7 @@ nav.scrolled {
 
     box-shadow:
         0 10px 30px
-        rgba(100,230,250,.3);
+        rgba(100, 230, 250, 0.3);
 }
 
 .main-btn:hover {
@@ -709,12 +722,12 @@ nav.scrolled {
 
     border:
         1px solid
-        rgba(255,255,255,.4);
+        rgba(255, 255, 255, 0.4);
 }
 
 .outline-btn:hover {
     background:
-        rgba(255,255,255,.1);
+        rgba(255, 255, 255, 0.1);
 }
 
 
@@ -731,15 +744,12 @@ nav.scrolled {
     flex-shrink: 0;
 }
 
-
-/* RINGS */
-
 .profile-ring {
     position: absolute;
 
     border:
         1px solid
-        rgba(130,240,255,.5);
+        rgba(130, 240, 255, 0.5);
 
     border-radius: 50%;
 }
@@ -768,7 +778,7 @@ nav.scrolled {
 }
 
 
-/* PHOTO FRAME */
+/* PROFILE PHOTO */
 
 .profile {
     position: absolute;
@@ -785,22 +795,19 @@ nav.scrolled {
     align-items: center;
 
     background:
-        rgba(255,255,255,.08);
+        rgba(255, 255, 255, 0.08);
 
     border:
         3px solid
-        rgba(255,255,255,.55);
+        rgba(255, 255, 255, 0.55);
 
     box-shadow:
         0 0 60px
-        rgba(100,235,255,.3),
+        rgba(100, 235, 255, 0.3),
 
         inset 0 0 40px
-        rgba(255,255,255,.1);
+        rgba(255, 255, 255, 0.1);
 }
-
-
-/* FOTO */
 
 .profile-photo {
     display: block;
@@ -892,25 +899,27 @@ nav.scrolled {
 
 .title p {
     color:
-        rgba(255,255,255,.65);
+        rgba(255, 255, 255, 0.65);
 }
 
 
-/* GLASS */
+/* =========================
+   GLASS
+========================= */
 
 .glass {
     background:
-        rgba(255,255,255,.08);
+        rgba(255, 255, 255, 0.08);
 
     border:
         1px solid
-        rgba(255,255,255,.15);
+        rgba(255, 255, 255, 0.15);
 
     backdrop-filter: blur(15px);
 
     box-shadow:
         0 20px 50px
-        rgba(0,0,0,.15);
+        rgba(0, 0, 0, 0.15);
 }
 
 
@@ -952,7 +961,7 @@ nav.scrolled {
 
 .about-card p {
     color:
-        rgba(255,255,255,.72);
+        rgba(255, 255, 255, 0.72);
 
     line-height: 1.8;
 
@@ -993,7 +1002,7 @@ nav.scrolled {
 
 .stat small {
     color:
-        rgba(255,255,255,.6);
+        rgba(255, 255, 255, 0.6);
 }
 
 
@@ -1019,7 +1028,7 @@ nav.scrolled {
 
     border-radius: 22px;
 
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .skill:hover {
@@ -1046,32 +1055,32 @@ nav.scrolled {
 
 .html {
     background:
-        rgba(255,100,50,.25);
+        rgba(255, 100, 50, 0.25);
 }
 
 .css {
     background:
-        rgba(70,150,255,.25);
+        rgba(70, 150, 255, 0.25);
 }
 
 .js {
     background:
-        rgba(255,220,70,.25);
+        rgba(255, 220, 70, 0.25);
 }
 
 .php {
     background:
-        rgba(150,140,255,.25);
+        rgba(150, 140, 255, 0.25);
 }
 
 .sql {
     background:
-        rgba(80,210,255,.25);
+        rgba(80, 210, 255, 0.25);
 }
 
 .ui {
     background:
-        rgba(230,120,255,.25);
+        rgba(230, 120, 255, 0.25);
 }
 
 .skill h3 {
@@ -1080,7 +1089,7 @@ nav.scrolled {
 
 .skill p {
     color:
-        rgba(255,255,255,.6);
+        rgba(255, 255, 255, 0.6);
 
     font-size: 13px;
 
@@ -1094,7 +1103,7 @@ nav.scrolled {
     height: 7px;
 
     background:
-        rgba(255,255,255,.1);
+        rgba(255, 255, 255, 0.1);
 
     border-radius: 20px;
 
@@ -1147,7 +1156,7 @@ nav.scrolled {
 
     border-radius: 25px;
 
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .project:hover {
@@ -1212,7 +1221,7 @@ nav.scrolled {
 
 .project-info p {
     color:
-        rgba(255,255,255,.65);
+        rgba(255, 255, 255, 0.65);
 
     line-height: 1.7;
 
@@ -1231,7 +1240,7 @@ nav.scrolled {
 
 .tags span {
     background:
-        rgba(255,255,255,.08);
+        rgba(255, 255, 255, 0.08);
 
     padding:
         5px 10px;
@@ -1279,7 +1288,7 @@ nav.scrolled {
     background:
         linear-gradient(
             #72eaff,
-            rgba(114,234,255,0)
+            rgba(114, 234, 255, 0)
         );
 }
 
@@ -1333,7 +1342,7 @@ nav.scrolled {
 
 .timeline-card p {
     color:
-        rgba(255,255,255,.65);
+        rgba(255, 255, 255, 0.65);
 
     line-height: 1.7;
 
@@ -1370,7 +1379,7 @@ nav.scrolled {
 
 .contact-info > p {
     color:
-        rgba(255,255,255,.65);
+        rgba(255, 255, 255, 0.65);
 
     line-height: 1.7;
 
@@ -1398,7 +1407,7 @@ nav.scrolled {
 
 .contact-detail p {
     color:
-        rgba(255,255,255,.8);
+        rgba(255, 255, 255, 0.8);
 
     font-size: 14px;
 }
@@ -1421,12 +1430,12 @@ nav.scrolled {
 
     border:
         1px solid
-        rgba(255,255,255,.15);
+        rgba(255, 255, 255, 0.15);
 
     outline: none;
 
     background:
-        rgba(0,0,0,.15);
+        rgba(0, 0, 0, 0.15);
 
     color: white;
 
@@ -1440,7 +1449,7 @@ nav.scrolled {
 #contactForm input::placeholder,
 #contactForm textarea::placeholder {
     color:
-        rgba(255,255,255,.45);
+        rgba(255, 255, 255, 0.45);
 }
 
 #contactForm input:focus,
@@ -1469,7 +1478,7 @@ nav.scrolled {
 
     cursor: pointer;
 
-    transition: .3s;
+    transition: 0.3s;
 }
 
 #contactForm button:hover,
@@ -1501,7 +1510,7 @@ footer h2 {
 
 footer p {
     color:
-        rgba(255,255,255,.6);
+        rgba(255, 255, 255, 0.6);
 
     margin:
         10px 0 25px;
@@ -1531,7 +1540,7 @@ footer p {
 
 footer small {
     color:
-        rgba(255,255,255,.4);
+        rgba(255, 255, 255, 0.4);
 }
 
 
@@ -1547,7 +1556,7 @@ footer small {
     z-index: 9999;
 
     background:
-        rgba(0,15,30,.75);
+        rgba(0, 15, 30, 0.75);
 
     backdrop-filter: blur(10px);
 
@@ -1607,7 +1616,7 @@ footer small {
 
 .modal-box p {
     color:
-        rgba(255,255,255,.65);
+        rgba(255, 255, 255, 0.65);
 
     line-height: 1.7;
 
@@ -1616,45 +1625,4 @@ footer small {
 
 
 /* =========================
-   SCROLL ANIMATION
-========================= */
-
-.reveal {
-    opacity: 0;
-
-    transform: translateY(35px);
-
-    transition:
-        opacity .8s ease,
-        transform .8s ease;
-}
-
-.reveal.show {
-    opacity: 1;
-
-    transform: translateY(0);
-}
-
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-    .nav-links {
-        position: fixed;
-
-        top: 70px;
-        right: -100%;
-
-        width: 250px;
-
-        padding: 30px;
-
-        flex-direction: column;
-
-        background:
-            rgba(0,35,60,.95);
-
-        b
+   SCROLL ANIMA
