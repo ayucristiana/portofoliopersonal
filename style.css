@@ -15,95 +15,145 @@ body {
     overflow-x: hidden;
 }
 
-/* LOADER */
+
+/* =========================
+   LOADER
+========================= */
 
 #loader {
     position: fixed;
     inset: 0;
-    background: #001a30;
     z-index: 99999;
+
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 1s;
+
+    background: #001a30;
+
+    transition: 1s ease;
 }
 
-.loader-box {
+.loader-content {
     text-align: center;
 }
 
-.loader-bubble {
+.loader-icon {
     font-size: 70px;
-    animation: loader 1.5s infinite;
+
+    animation: loaderFloat 1.5s infinite;
 }
 
-.loader-box h2 {
-    font-family: "Fredoka";
+.loader-content h2 {
+    font-family: "Fredoka", sans-serif;
     margin-top: 15px;
 }
 
-.loader-box p {
+.loader-content p {
     color: #8ceeff;
     margin-top: 8px;
 }
 
-@keyframes loader {
+.loading-bar {
+    width: 180px;
+    height: 5px;
+
+    margin: 25px auto 0;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.1);
+
+    overflow: hidden;
+}
+
+.loading-bar span {
+    display: block;
+
+    width: 0;
+    height: 100%;
+
+    background: #82edff;
+
+    animation: loading 1.2s forwards;
+}
+
+@keyframes loading {
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes loaderFloat {
     0%,100% {
-        transform: translateY(0) scale(.9);
+        transform: translateY(0);
     }
 
     50% {
-        transform: translateY(-20px) scale(1.1);
+        transform: translateY(-20px);
     }
 }
 
 
-/* OCEAN */
+/* =========================
+   OCEAN
+========================= */
 
 .ocean {
     position: fixed;
     inset: 0;
+
     z-index: -10;
+
     overflow: hidden;
 
     background:
         linear-gradient(
             180deg,
-            #63dfff 0%,
-            #159bc7 17%,
-            #066d9d 40%,
+            #61ddfa 0%,
+            #159bc7 18%,
+            #076e9d 40%,
             #034d78 65%,
             #022f50 82%,
             #001a2f 100%
         );
 }
 
+
+/* SUN */
+
 .sun {
     position: absolute;
-    top: -100px;
-    left: 50%;
-    transform: translateX(-50%);
 
-    width: 280px;
-    height: 280px;
+    top: -120px;
+    left: 50%;
+
+    width: 300px;
+    height: 300px;
+
+    transform: translateX(-50%);
 
     border-radius: 50%;
 
-    background: rgba(255,255,210,.5);
+    background: rgba(255,255,210,.45);
 
-    filter: blur(50px);
+    filter: blur(55px);
 }
+
+
+/* LIGHT RAYS */
 
 .light-ray {
     position: absolute;
-    top: -100px;
 
-    height: 850px;
-    width: 160px;
+    top: -150px;
 
-    background: rgba(255,255,255,.12);
+    width: 170px;
+    height: 900px;
 
-    filter: blur(10px);
+    background: rgba(255,255,255,.11);
+
+    filter: blur(12px);
 
     transform: rotate(20deg);
 
@@ -111,7 +161,7 @@ body {
 }
 
 .ray1 {
-    left: 15%;
+    left: 12%;
 }
 
 .ray2 {
@@ -120,7 +170,7 @@ body {
 }
 
 .ray3 {
-    left: 75%;
+    left: 78%;
     animation-delay: 4s;
 }
 
@@ -131,19 +181,23 @@ body {
     }
 
     to {
-        opacity: .5;
+        opacity: .55;
         transform: rotate(25deg);
     }
 }
 
 
-/* BUBBLES */
+/* =========================
+   BUBBLES
+========================= */
 
 .bubble {
     position: absolute;
+
     bottom: -80px;
 
     border: 2px solid rgba(255,255,255,.45);
+
     border-radius: 50%;
 
     background: rgba(255,255,255,.04);
@@ -153,6 +207,7 @@ body {
 
 .bubble::after {
     content: "";
+
     position: absolute;
 
     width: 20%;
@@ -162,6 +217,7 @@ body {
     left: 22%;
 
     border-radius: 50%;
+
     background: rgba(255,255,255,.8);
 }
 
@@ -224,8 +280,9 @@ body {
 }
 
 @keyframes rise {
+
     0% {
-        transform: translateY(0) translateX(0);
+        transform: translateY(0);
         opacity: 0;
     }
 
@@ -244,10 +301,13 @@ body {
 }
 
 
-/* FISH */
+/* =========================
+   FISH
+========================= */
 
 .fish {
     position: absolute;
+
     width: 100px;
     height: 55px;
 
@@ -256,6 +316,7 @@ body {
 
 .fish-body {
     position: absolute;
+
     right: 0;
     top: 7px;
 
@@ -263,11 +324,13 @@ body {
     height: 42px;
 
     background: #ffae42;
+
     border-radius: 50%;
 }
 
 .fish-tail {
     position: absolute;
+
     left: 0;
     top: 7px;
 
@@ -281,6 +344,7 @@ body {
 
 .fish-eye {
     position: absolute;
+
     right: 17px;
     top: 18px;
 
@@ -288,6 +352,7 @@ body {
     height: 8px;
 
     border-radius: 50%;
+
     background: #00233a;
 }
 
@@ -314,6 +379,7 @@ body {
 }
 
 @keyframes swim {
+
     0% {
         left: -150px;
     }
@@ -328,10 +394,13 @@ body {
 }
 
 
-/* JELLYFISH */
+/* =========================
+   JELLYFISH
+========================= */
 
 .jellyfish {
     position: absolute;
+
     right: 7%;
     top: 38%;
 
@@ -351,6 +420,7 @@ body {
 
 .tentacles {
     display: flex;
+
     justify-content: space-around;
 }
 
@@ -378,6 +448,7 @@ body {
 }
 
 @keyframes jelly {
+
     0%,100% {
         transform: translateY(0);
     }
@@ -388,6 +459,7 @@ body {
 }
 
 @keyframes tentacle {
+
     from {
         transform: rotate(-8deg);
     }
@@ -398,10 +470,13 @@ body {
 }
 
 
-/* SEAWEED */
+/* =========================
+   SEAWEED
+========================= */
 
 .seaweed {
     position: absolute;
+
     bottom: 20px;
 
     width: 25px;
@@ -435,7 +510,13 @@ body {
     height: 160px;
 }
 
+.sw5 {
+    left: 42%;
+    height: 130px;
+}
+
 @keyframes wavePlant {
+
     from {
         transform: rotate(-8deg);
     }
@@ -450,7 +531,9 @@ body {
 
 .coral {
     position: absolute;
+
     bottom: 15px;
+
     font-size: 80px;
 
     animation: coralFloat 5s infinite ease-in-out;
@@ -472,6 +555,7 @@ body {
 }
 
 @keyframes coralFloat {
+
     0%,100% {
         transform: translateY(0);
     }
@@ -486,7 +570,9 @@ body {
 
 .sand {
     position: absolute;
+
     bottom: -45px;
+
     width: 100%;
     height: 100px;
 
@@ -496,7 +582,9 @@ body {
 }
 
 
-/* NAVBAR */
+/* =========================
+   NAVBAR
+========================= */
 
 header {
     position: relative;
@@ -505,6 +593,7 @@ header {
 
 nav {
     position: fixed;
+
     top: 0;
     left: 0;
 
@@ -513,6 +602,7 @@ nav {
     padding: 18px 7%;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
@@ -521,14 +611,17 @@ nav {
 
 nav.scrolled {
     background: rgba(0,25,45,.8);
+
     backdrop-filter: blur(15px);
 }
 
 .logo {
     color: white;
+
     text-decoration: none;
 
-    font-family: "Fredoka";
+    font-family: "Fredoka", sans-serif;
+
     font-size: 30px;
     font-weight: 600;
 }
@@ -539,14 +632,19 @@ nav.scrolled {
 
 .nav-links {
     display: flex;
+
     list-style: none;
+
     gap: 28px;
 }
 
 .nav-links a {
     color: white;
+
     text-decoration: none;
+
     font-size: 14px;
+
     transition: .3s;
 }
 
@@ -558,14 +656,20 @@ nav.scrolled {
     display: none;
 
     border: none;
+
     background: none;
+
     color: white;
 
     font-size: 26px;
+
+    cursor: pointer;
 }
 
 
-/* HERO */
+/* =========================
+   HERO
+========================= */
 
 .hero {
     min-height: 100vh;
@@ -573,7 +677,9 @@ nav.scrolled {
     padding: 120px 9% 80px;
 
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
 
     gap: 50px;
@@ -585,13 +691,17 @@ nav.scrolled {
 
 .welcome {
     color: #9af3ff;
+
     font-size: 13px;
+
     letter-spacing: 3px;
 }
 
 .hero h1 {
-    font-family: "Fredoka";
-    font-size: clamp(55px,8vw,90px);
+    font-family: "Fredoka", sans-serif;
+
+    font-size: clamp(55px, 8vw, 90px);
+
     line-height: .95;
 
     margin: 25px 0;
@@ -600,7 +710,8 @@ nav.scrolled {
 .hero h1 span {
     color: #8aefff;
 
-    text-shadow: 0 0 25px rgba(100,235,255,.5);
+    text-shadow:
+        0 0 25px rgba(100,235,255,.5);
 }
 
 .hero-text > p {
@@ -615,12 +726,15 @@ nav.scrolled {
     margin-top: 35px;
 
     display: flex;
+
     gap: 15px;
+
     flex-wrap: wrap;
 }
 
 .btn {
     text-decoration: none;
+
     padding: 14px 25px;
 
     border-radius: 50px;
@@ -630,9 +744,11 @@ nav.scrolled {
 
 .main-btn {
     color: #00304a;
+
     background: #75e9fa;
 
-    box-shadow: 0 10px 30px rgba(100,230,250,.3);
+    box-shadow:
+        0 10px 30px rgba(100,230,250,.3);
 }
 
 .main-btn:hover {
@@ -641,6 +757,7 @@ nav.scrolled {
 
 .outline-btn {
     color: white;
+
     border: 1px solid rgba(255,255,255,.4);
 }
 
@@ -649,7 +766,9 @@ nav.scrolled {
 }
 
 
-/* PROFILE */
+/* =========================
+   PROFILE
+========================= */
 
 .profile-area {
     position: relative;
@@ -660,42 +779,29 @@ nav.scrolled {
     flex-shrink: 0;
 }
 
-.profile {
-    position: absolute;
-    inset: 35px;
 
-    border-radius: 50%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    background: rgba(255,255,255,.08);
-
-    border: 2px solid rgba(255,255,255,.5);
-
-    backdrop-filter: blur(10px);
-
-    box-shadow:
-        0 0 60px rgba(100,235,255,.3),
-        inset 0 0 40px rgba(255,255,255,.1);
-}
+/* RINGS */
 
 .profile-ring {
     position: absolute;
 
     border: 1px solid rgba(130,240,255,.5);
+
     border-radius: 50%;
 }
 
 .ring1 {
     inset: 15px;
-    animation: rotate 15s linear infinite;
+
+    animation:
+        rotate 15s linear infinite;
 }
 
 .ring2 {
     inset: 0;
-    animation: rotate 20s linear infinite reverse;
+
+    animation:
+        rotate 20s linear infinite reverse;
 }
 
 @keyframes rotate {
@@ -705,105 +811,59 @@ nav.scrolled {
 }
 
 
-/* AVATAR */
+/* FOTO FRAME */
 
-.avatar {
-    position: relative;
-    width: 220px;
-    height: 250px;
-}
-
-.face {
+.profile {
     position: absolute;
 
-    left: 35px;
-    top: 45px;
+    inset: 35px;
 
-    width: 150px;
-    height: 155px;
-
-    background: #f5c6a5;
-
-    border-radius: 48% 48% 45% 45%;
-
-    z-index: 2;
-}
-
-.hair {
-    position: absolute;
-
-    left: 25px;
-    top: 25px;
-
-    width: 170px;
-    height: 130px;
-
-    background: #3a2430;
-
-    border-radius: 50% 50% 30% 30%;
-
-    z-index: 3;
-}
-
-.eye {
-    position: absolute;
-
-    top: 65px;
-
-    width: 11px;
-    height: 11px;
+    width: auto;
+    height: auto;
 
     border-radius: 50%;
 
-    background: #382530;
-}
-
-.eye.left {
-    left: 40px;
-}
-
-.eye.right {
-    right: 40px;
-}
-
-.smile {
-    position: absolute;
-
-    left: 62px;
-    top: 95px;
-
-    width: 25px;
-    height: 12px;
-
-    border-bottom: 3px solid #9d5260;
-
-    border-radius: 50%;
-}
-
-.shirt {
-    position: absolute;
-
-    left: 15px;
-    bottom: 0;
-
-    width: 190px;
-    height: 100px;
-
-    background: #078bb1;
-
-    border-radius: 80px 80px 20px 20px;
-
-    z-index: 1;
+    overflow: hidden;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
-    font-size: 35px;
+    background: rgba(255,255,255,.08);
+
+    border: 3px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 0 60px rgba(100,235,255,.3),
+        inset 0 0 40px rgba(255,255,255,.1);
 }
+
+
+/* FOTO KAMU */
+
+.profile-photo {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    max-width: 100%;
+    max-height: 100%;
+
+    object-fit: cover;
+
+    object-position: center top;
+
+    border-radius: 50%;
+}
+
+
+/* ICON SEKITAR FOTO */
 
 .floating-icon {
     position: absolute;
+
     font-size: 35px;
 
     animation: floatIcon 4s infinite ease-in-out;
@@ -829,21 +889,28 @@ nav.scrolled {
 }
 
 @keyframes floatIcon {
+
     50% {
-        transform: translateY(-20px) rotate(10deg);
+        transform:
+            translateY(-20px)
+            rotate(10deg);
     }
 }
 
 
-/* SECTION */
+/* =========================
+   SECTION
+========================= */
 
 .section {
     min-height: 80vh;
+
     padding: 120px 8%;
 }
 
 .title {
     text-align: center;
+
     margin-bottom: 65px;
 }
 
@@ -852,8 +919,10 @@ nav.scrolled {
 }
 
 .title h2 {
-    font-family: "Fredoka";
+    font-family: "Fredoka", sans-serif;
+
     font-size: 50px;
+
     margin: 10px 0;
 }
 
@@ -875,11 +944,14 @@ nav.scrolled {
 
     backdrop-filter: blur(15px);
 
-    box-shadow: 0 20px 50px rgba(0,0,0,.15);
+    box-shadow:
+        0 20px 50px rgba(0,0,0,.15);
 }
 
 
-/* ABOUT */
+/* =========================
+   ABOUT
+========================= */
 
 .about-grid {
     max-width: 1100px;
@@ -895,6 +967,7 @@ nav.scrolled {
 
 .about-card {
     padding: 40px;
+
     border-radius: 25px;
 }
 
@@ -903,28 +976,36 @@ nav.scrolled {
 }
 
 .about-card h3 {
-    font-family: "Fredoka";
+    font-family: "Fredoka", sans-serif;
+
     font-size: 30px;
+
     margin: 10px 0 15px;
 }
 
 .about-card p {
     color: rgba(255,255,255,.72);
+
     line-height: 1.8;
+
     margin-bottom: 15px;
 }
 
 .stats {
     display: grid;
+
     gap: 15px;
 }
 
 .stat {
     border-radius: 20px;
+
     padding: 20px;
 
     display: flex;
+
     align-items: center;
+
     gap: 20px;
 }
 
@@ -934,8 +1015,11 @@ nav.scrolled {
 
 .stat strong {
     display: block;
+
     color: #82edff;
-    font-family: "Fredoka";
+
+    font-family: "Fredoka", sans-serif;
+
     font-size: 27px;
 }
 
@@ -944,19 +1028,26 @@ nav.scrolled {
 }
 
 
-/* SKILLS */
+/* =========================
+   SKILLS
+========================= */
 
 .skills {
     max-width: 1100px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap: 20px;
 }
 
 .skill {
     padding: 28px;
+
     border-radius: 22px;
 
     transition: .4s;
@@ -964,6 +1055,7 @@ nav.scrolled {
 
 .skill:hover {
     transform: translateY(-10px);
+
     border-color: #7deaff;
 }
 
@@ -974,6 +1066,7 @@ nav.scrolled {
     border-radius: 18px;
 
     display: flex;
+
     align-items: center;
     justify-content: center;
 
@@ -1012,53 +1105,68 @@ nav.scrolled {
 
 .skill p {
     color: rgba(255,255,255,.6);
+
     font-size: 13px;
+
     margin: 5px 0 18px;
 }
 
 .bar {
     width: 100%;
+
     height: 7px;
 
     background: rgba(255,255,255,.1);
 
     border-radius: 20px;
+
     overflow: hidden;
 }
 
 .bar span {
     display: block;
+
     height: 100%;
 
-    background: linear-gradient(
-        90deg,
-        #42cde7,
-        #a2f5ff
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #42cde7,
+            #a2f5ff
+        );
 
     border-radius: 20px;
 }
 
 .skill small {
     display: block;
+
     margin-top: 8px;
+
     color: #8eefff;
 }
 
 
-/* PROJECTS */
+/* =========================
+   PROJECTS
+========================= */
 
 .projects {
     max-width: 1150px;
+
     margin: auto;
 
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+
+    grid-template-columns:
+        repeat(3,1fr);
+
     gap: 25px;
 }
 
 .project {
     overflow: hidden;
+
     border-radius: 25px;
 
     transition: .4s;
@@ -1072,6 +1180,7 @@ nav.scrolled {
     height: 190px;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
@@ -1079,15 +1188,30 @@ nav.scrolled {
 }
 
 .food {
-    background: linear-gradient(135deg,#0b709e,#073d63);
+    background:
+        linear-gradient(
+            135deg,
+            #0b709e,
+            #073d63
+        );
 }
 
 .library {
-    background: linear-gradient(135deg,#584183,#20345d);
+    background:
+        linear-gradient(
+            135deg,
+            #584183,
+            #20345d
+        );
 }
 
 .ocean-project {
-    background: linear-gradient(135deg,#078297,#043b65);
+    background:
+        linear-gradient(
+            135deg,
+            #078297,
+            #043b65
+        );
 }
 
 .project-info {
@@ -1096,49 +1220,68 @@ nav.scrolled {
 
 .project-info label {
     color: #84edff;
+
     font-size: 11px;
 }
 
 .project-info h3 {
-    font-family: "Fredoka";
+    font-family: "Fredoka", sans-serif;
+
     font-size: 25px;
+
     margin: 7px 0;
 }
 
 .project-info p {
     color: rgba(255,255,255,.65);
+
     line-height: 1.7;
+
     font-size: 13px;
 }
 
 .tags {
     display: flex;
+
     flex-wrap: wrap;
+
     gap: 7px;
+
     margin: 18px 0;
 }
 
 .tags span {
     background: rgba(255,255,255,.08);
+
     padding: 5px 10px;
+
     border-radius: 20px;
+
     font-size: 10px;
 }
 
 .project-btn {
     border: none;
+
     background: none;
+
     color: #8ceeff;
+
     cursor: pointer;
+
     font-weight: 600;
 }
 
 
-/* TIMELINE */
+/* =========================
+   TIMELINE
+========================= */
 
 .timeline {
     max-width: 850px;
+
     margin: auto;
+
     position: relative;
 }
 
@@ -1146,20 +1289,24 @@ nav.scrolled {
     position: absolute;
 
     left: 25px;
+
     top: 0;
     bottom: 0;
 
     width: 2px;
 
-    background: linear-gradient(
-        #72eaff,
-        rgba(114,234,255,0)
-    );
+    background:
+        linear-gradient(
+            #72eaff,
+            rgba(114,234,255,0)
+        );
 }
 
 .timeline-item {
     position: relative;
+
     padding-left: 80px;
+
     margin-bottom: 40px;
 }
 
@@ -1178,6 +1325,7 @@ nav.scrolled {
     border: 2px solid #7deaff;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 
@@ -1186,11 +1334,13 @@ nav.scrolled {
 
 .timeline-card {
     padding: 25px;
+
     border-radius: 20px;
 }
 
 .timeline-card > span {
     color: #83ebff;
+
     font-size: 12px;
 }
 
@@ -1200,15 +1350,20 @@ nav.scrolled {
 
 .timeline-card p {
     color: rgba(255,255,255,.65);
+
     line-height: 1.7;
+
     font-size: 14px;
 }
 
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact {
     max-width: 950px;
+
     margin: auto;
 
     padding: 45px;
@@ -1216,25 +1371,33 @@ nav.scrolled {
     border-radius: 30px;
 
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 50px;
 }
 
 .contact-info h3 {
-    font-family: "Fredoka";
+    font-family: "Fredoka", sans-serif;
+
     font-size: 30px;
 }
 
 .contact-info > p {
     color: rgba(255,255,255,.65);
+
     line-height: 1.7;
+
     margin: 15px 0 30px;
 }
 
 .contact-detail {
     display: flex;
+
     align-items: center;
+
     gap: 15px;
+
     margin-bottom: 20px;
 }
 
@@ -1248,7 +1411,9 @@ nav.scrolled {
 
 #contactForm {
     display: flex;
+
     flex-direction: column;
+
     gap: 15px;
 }
 
@@ -1293,11 +1458,12 @@ nav.scrolled {
 
     border-radius: 12px;
 
-    background: linear-gradient(
-        90deg,
-        #4bd0e9,
-        #9af3ff
-    );
+    background:
+        linear-gradient(
+            90deg,
+            #4bd0e9,
+            #9af3ff
+        );
 
     color: #00304a;
 
@@ -1307,35 +1473,47 @@ nav.scrolled {
 }
 
 
-/* FOOTER */
+/* =========================
+   FOOTER
+========================= */
 
 footer {
     background: #001323;
+
     text-align: center;
+
     padding: 70px 20px 30px;
 }
 
 footer h2 {
-    font-family: "Fredoka";
+    font-family: "Fredoka", sans-serif;
+
     font-size: 35px;
+
     color: #80eaff;
 }
 
 footer p {
     color: rgba(255,255,255,.6);
+
     margin: 10px 0 25px;
 }
 
 .social {
     display: flex;
+
     justify-content: center;
+
     gap: 25px;
+
     margin-bottom: 30px;
 }
 
 .social a {
     color: #83eaff;
+
     text-decoration: none;
+
     font-size: 13px;
 }
 
@@ -1344,10 +1522,13 @@ footer small {
 }
 
 
-/* MODAL */
+/* =========================
+   MODAL
+========================= */
 
 .modal {
     position: fixed;
+
     inset: 0;
 
     z-index: 9999;
@@ -1359,6 +1540,7 @@ footer small {
     display: none;
 
     justify-content: center;
+
     align-items: center;
 
     padding: 20px;
@@ -1372,6 +1554,7 @@ footer small {
     position: relative;
 
     width: 100%;
+
     max-width: 450px;
 
     padding: 40px;
@@ -1388,6 +1571,7 @@ footer small {
     right: 20px;
 
     border: none;
+
     background: none;
 
     color: white;
@@ -1402,137 +1586,46 @@ footer small {
 }
 
 .modal-box h2 {
-    font-family: "Fredoka";
+    font-family: "Fredoka", sans-serif;
+
     margin: 10px 0;
 }
 
 .modal-box p {
     color: rgba(255,255,255,.65);
+
     line-height: 1.7;
+
     margin-bottom: 25px;
 }
 
 
-/* RESPONSIVE */
+/* =========================
+   SCROLL REVEAL
+========================= */
+
+.hidden {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition: all .8s ease;
+}
+
+.visible {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 900px) {
 
     .nav-links {
         position: fixed;
 
-        top: 70px;
-        right: -100%;
-
-        width: 250px;
-
-        padding: 30px;
-
-        flex-direction: column;
-
-        background: rgba(0,35,60,.95);
-
-        backdrop-filter: blur(15px);
-
-        border-radius: 20px 0 0 20px;
-
-        transition: .4s;
-    }
-
-    .nav-links.active {
-        right: 0;
-    }
-
-    .menu-btn {
-        display: block;
-    }
-
-    .hero {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .buttons {
-        justify-content: center;
-    }
-
-    .about-grid,
-    .contact {
-        grid-template-columns: 1fr;
-    }
-
-    .skills,
-    .projects {
-        grid-template-columns: repeat(2,1fr);
-    }
-
-    .profile-area {
-        width: 310px;
-        height: 310px;
-    }
-}
-
-
-@media (max-width: 600px) {
-
-    nav {
-        padding: 15px 5%;
-    }
-
-    .hero {
-        padding: 110px 6% 60px;
-    }
-
-    .hero h1 {
-        font-size: 55px;
-    }
-
-    .hero-text > p {
-        font-size: 14px;
-    }
-
-    .section {
-        padding: 90px 6%;
-    }
-
-    .title h2 {
-        font-size: 40px;
-    }
-
-    .skills,
-    .projects {
-        grid-template-columns: 1fr;
-    }
-
-    .contact {
-        padding: 25px;
-    }
-
-    .about-card {
-        padding: 25px;
-    }
-
-    .profile-area {
-        width: 270px;
-        height: 270px;
-    }
-
-    .avatar {
-        transform: scale(.8);
-    }
-
-    .jellyfish {
-        right: -20px;
-    }
-
-    .timeline-item {
-        padding-left: 65px;
-    }
-    .profile-photo {
-    width: 85%;
-    height: 85%;
-    object-fit: cover;
-    border-radius: 50%;
-    display: block;
-    border: 4px solid rgba(255,255,255,.5);
-    }
-                     }
+    
