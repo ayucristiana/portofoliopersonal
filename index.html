@@ -3,21 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayu Cristiana | Portfolio</title>
+
+    <title>Ayu Cristiana | Ocean Portfolio</title>
+
     <link rel="stylesheet" href="style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
+    <!-- LOADING -->
     <div id="loader">
-        <div class="loader-box">
-            <div class="loader-bubble">🌊</div>
-            <h2>Welcome to My Portofolio</h2>
+        <div class="loader-content">
+            <div class="loader-icon">🌊</div>
+            <h2>Welcome to My Ocean</h2>
             <p>Preparing the underwater world...</p>
+
+            <div class="loading-bar">
+                <span></span>
+            </div>
         </div>
     </div>
 
+
+    <!-- UNDERWATER BACKGROUND -->
     <div class="ocean">
 
         <div class="sun"></div>
@@ -26,6 +36,7 @@
         <div class="light-ray ray2"></div>
         <div class="light-ray ray3"></div>
 
+        <!-- BUBBLES -->
         <div class="bubble b1"></div>
         <div class="bubble b2"></div>
         <div class="bubble b3"></div>
@@ -35,6 +46,7 @@
         <div class="bubble b7"></div>
         <div class="bubble b8"></div>
 
+        <!-- FISH -->
         <div class="fish fish1">
             <div class="fish-body"></div>
             <div class="fish-tail"></div>
@@ -53,72 +65,111 @@
             <div class="fish-eye"></div>
         </div>
 
+        <!-- JELLYFISH -->
         <div class="jellyfish">
+
             <div class="jelly-head"></div>
+
             <div class="tentacles">
                 <span></span>
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
+
         </div>
 
+        <!-- SEAWEED -->
         <div class="seaweed sw1"></div>
         <div class="seaweed sw2"></div>
         <div class="seaweed sw3"></div>
         <div class="seaweed sw4"></div>
+        <div class="seaweed sw5"></div>
 
+        <!-- CORAL -->
         <div class="coral coral1">🪸</div>
         <div class="coral coral2">🪸</div>
         <div class="coral coral3">🪸</div>
 
         <div class="sand"></div>
+
     </div>
 
 
+    <!-- NAVBAR -->
     <header>
+
         <nav id="navbar">
 
             <a href="#home" class="logo">
                 🐚 <span>Ayu</span>
             </a>
 
-            <button class="menu-btn" id="menuBtn">☰</button>
+            <button class="menu-btn" id="menuBtn">
+                ☰
+            </button>
 
             <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#contact">Contact</a></li>
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#education">Education</a>
+                </li>
+
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+
             </ul>
 
         </nav>
+
     </header>
 
 
+    <!-- MAIN -->
     <main>
 
+
+        <!-- HERO -->
         <section class="hero" id="home">
 
             <div class="hero-text">
 
-                <span class="welcome">🌊 WELCOME TO MY OCEAN</span>
+                <span class="welcome">
+                    🌊 WELCOME TO MY OCEAN
+                </span>
 
                 <h1>
-                    Ayu<br>
-                    <span>Cristiana</span>
+                    Dive Into
+                    <br>
+                    <span>My World</span>
                 </h1>
 
                 <p>
-                    Halo! Saya <b>Ayu Cristiana</b>, siswi
-                    Rekayasa Perangkat Lunak yang memiliki
-                    ketertarikan pada web development,
+                    Halo! Saya <strong>Ayu Cristiana</strong>,
+                    siswi Rekayasa Perangkat Lunak yang
+                    memiliki ketertarikan pada web development,
                     desain, dan teknologi.
                 </p>
 
                 <div class="buttons">
+
                     <a href="#projects" class="btn main-btn">
                         Explore My Work 🌊
                     </a>
@@ -126,44 +177,74 @@
                     <a href="#contact" class="btn outline-btn">
                         Contact Me
                     </a>
+
                 </div>
 
             </div>
 
 
+            <!-- PROFILE -->
             <div class="profile-area">
 
                 <div class="profile-ring ring1"></div>
                 <div class="profile-ring ring2"></div>
 
                 <div class="profile">
-                  <img src="foto1.png" alt="Foto Ayu" class="profile-photo">
+
+                    <img
+                        src="foto1.png"
+                        alt="Foto Profil Ayu Cristiana"
+                        class="profile-photo"
+                    >
+
                 </div>
 
-                <div class="floating-icon icon1">🐚</div>
-                <div class="floating-icon icon2">🫧</div>
-                <div class="floating-icon icon3">🪸</div>
+                <div class="floating-icon icon1">
+                    🐚
+                </div>
+
+                <div class="floating-icon icon2">
+                    🫧
+                </div>
+
+                <div class="floating-icon icon3">
+                    🪸
+                </div>
 
             </div>
 
         </section>
 
 
+        <!-- ABOUT -->
         <section class="section" id="about">
 
             <div class="title">
+
                 <span>🐚</span>
-                <h2>About <b>Me</b></h2>
-                <p>Get to know the person behind the waves</p>
+
+                <h2>
+                    About <b>Me</b>
+                </h2>
+
+                <p>
+                    Get to know the person behind the waves
+                </p>
+
             </div>
+
 
             <div class="about-grid">
 
                 <div class="glass about-card">
 
-                    <div class="big-icon">🌊</div>
+                    <div class="big-icon">
+                        🌊
+                    </div>
 
-                    <h3>Who Am I?</h3>
+                    <h3>
+                        Who Am I?
+                    </h3>
 
                     <p>
                         Saya adalah siswi SMK jurusan
@@ -185,27 +266,38 @@
                 <div class="stats">
 
                     <div class="glass stat">
+
                         <span>💻</span>
+
                         <div>
                             <strong>3+</strong>
                             <small>Projects</small>
                         </div>
+
                     </div>
 
+
                     <div class="glass stat">
+
                         <span>🌊</span>
+
                         <div>
                             <strong>100%</strong>
                             <small>Curiosity</small>
                         </div>
+
                     </div>
 
+
                     <div class="glass stat">
+
                         <span>🐚</span>
+
                         <div>
                             <strong>∞</strong>
                             <small>Learning</small>
                         </div>
+
                     </div>
 
                 </div>
@@ -215,74 +307,150 @@
         </section>
 
 
+        <!-- SKILLS -->
         <section class="section" id="skills">
 
             <div class="title">
+
                 <span>🪼</span>
-                <h2>My <b>Skills</b></h2>
-                <p>My abilities beneath the surface</p>
+
+                <h2>
+                    My <b>Skills</b>
+                </h2>
+
+                <p>
+                    My abilities beneath the surface
+                </p>
+
             </div>
+
 
             <div class="skills">
 
+
                 <div class="glass skill">
-                    <div class="skill-logo html">HTML</div>
+
+                    <div class="skill-logo html">
+                        HTML
+                    </div>
+
                     <h3>HTML</h3>
-                    <p>Website structure</p>
+
+                    <p>
+                        Website structure
+                    </p>
+
                     <div class="bar">
                         <span style="width:90%"></span>
                     </div>
+
                     <small>90%</small>
+
                 </div>
 
+
                 <div class="glass skill">
-                    <div class="skill-logo css">CSS</div>
+
+                    <div class="skill-logo css">
+                        CSS
+                    </div>
+
                     <h3>CSS</h3>
-                    <p>Website styling</p>
+
+                    <p>
+                        Website styling
+                    </p>
+
                     <div class="bar">
                         <span style="width:85%"></span>
                     </div>
+
                     <small>85%</small>
+
                 </div>
 
+
                 <div class="glass skill">
-                    <div class="skill-logo js">JS</div>
+
+                    <div class="skill-logo js">
+                        JS
+                    </div>
+
                     <h3>JavaScript</h3>
-                    <p>Interactive website</p>
+
+                    <p>
+                        Interactive website
+                    </p>
+
                     <div class="bar">
                         <span style="width:75%"></span>
                     </div>
+
                     <small>75%</small>
+
                 </div>
 
+
                 <div class="glass skill">
-                    <div class="skill-logo php">PHP</div>
+
+                    <div class="skill-logo php">
+                        PHP
+                    </div>
+
                     <h3>PHP</h3>
-                    <p>Backend development</p>
+
+                    <p>
+                        Backend development
+                    </p>
+
                     <div class="bar">
                         <span style="width:80%"></span>
                     </div>
+
                     <small>80%</small>
+
                 </div>
 
+
                 <div class="glass skill">
-                    <div class="skill-logo sql">SQL</div>
+
+                    <div class="skill-logo sql">
+                        SQL
+                    </div>
+
                     <h3>MySQL</h3>
-                    <p>Database management</p>
+
+                    <p>
+                        Database management
+                    </p>
+
                     <div class="bar">
                         <span style="width:85%"></span>
                     </div>
+
                     <small>85%</small>
+
                 </div>
 
+
                 <div class="glass skill">
-                    <div class="skill-logo ui">UI</div>
+
+                    <div class="skill-logo ui">
+                        UI
+                    </div>
+
                     <h3>UI Design</h3>
-                    <p>User interface design</p>
+
+                    <p>
+                        User interface design
+                    </p>
+
                     <div class="bar">
                         <span style="width:75%"></span>
                     </div>
+
                     <small>75%</small>
+
                 </div>
 
             </div>
@@ -290,15 +458,26 @@
         </section>
 
 
+        <!-- PROJECTS -->
         <section class="section" id="projects">
 
             <div class="title">
+
                 <span>🪸</span>
-                <h2>My <b>Projects</b></h2>
-                <p>Some treasures from my journey</p>
+
+                <h2>
+                    My <b>Projects</b>
+                </h2>
+
+                <p>
+                    Some treasures from my journey
+                </p>
+
             </div>
 
+
             <div class="projects">
+
 
                 <article class="glass project">
 
@@ -308,9 +487,13 @@
 
                     <div class="project-info">
 
-                        <label>WEBSITE</label>
+                        <label>
+                            WEBSITE
+                        </label>
 
-                        <h3>RM Aneka Nasi</h3>
+                        <h3>
+                            RM Aneka Nasi
+                        </h3>
 
                         <p>
                             Website restoran untuk menampilkan
@@ -319,13 +502,17 @@
                         </p>
 
                         <div class="tags">
+
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>Bootstrap</span>
+
                         </div>
 
-                        <button class="project-btn"
-                            data-name="RM Aneka Nasi">
+                        <button
+                            class="project-btn"
+                            data-name="RM Aneka Nasi"
+                        >
                             View Project →
                         </button>
 
@@ -342,9 +529,13 @@
 
                     <div class="project-info">
 
-                        <label>DATABASE</label>
+                        <label>
+                            DATABASE
+                        </label>
 
-                        <h3>Library System</h3>
+                        <h3>
+                            Library System
+                        </h3>
 
                         <p>
                             Sistem perpustakaan untuk mengelola
@@ -353,13 +544,17 @@
                         </p>
 
                         <div class="tags">
+
                             <span>PHP</span>
                             <span>MySQL</span>
                             <span>XAMPP</span>
+
                         </div>
 
-                        <button class="project-btn"
-                            data-name="Library System">
+                        <button
+                            class="project-btn"
+                            data-name="Library System"
+                        >
                             View Project →
                         </button>
 
@@ -376,9 +571,13 @@
 
                     <div class="project-info">
 
-                        <label>PORTFOLIO</label>
+                        <label>
+                            PORTFOLIO
+                        </label>
 
-                        <h3>Ocean Portfolio</h3>
+                        <h3>
+                            Ocean Portfolio
+                        </h3>
 
                         <p>
                             Portfolio pribadi dengan konsep
@@ -387,13 +586,17 @@
                         </p>
 
                         <div class="tags">
+
                             <span>HTML</span>
                             <span>CSS</span>
                             <span>JavaScript</span>
+
                         </div>
 
-                        <button class="project-btn"
-                            data-name="Ocean Portfolio">
+                        <button
+                            class="project-btn"
+                            data-name="Ocean Portfolio"
+                        >
                             View Project →
                         </button>
 
@@ -406,27 +609,44 @@
         </section>
 
 
+        <!-- EDUCATION -->
         <section class="section" id="education">
 
             <div class="title">
+
                 <span>🐠</span>
-                <h2>My <b>Journey</b></h2>
-                <p>Swimming through my learning journey</p>
+
+                <h2>
+                    My <b>Journey</b>
+                </h2>
+
+                <p>
+                    Swimming through my learning journey
+                </p>
+
             </div>
+
 
             <div class="timeline">
 
                 <div class="timeline-line"></div>
 
+
                 <div class="timeline-item">
 
-                    <div class="timeline-dot">🐚</div>
+                    <div class="timeline-dot">
+                        🐚
+                    </div>
 
                     <div class="glass timeline-card">
 
-                        <span>2024 — Present</span>
+                        <span>
+                            2024 — Present
+                        </span>
 
-                        <h3>SMK Rekayasa Perangkat Lunak</h3>
+                        <h3>
+                            SMK Rekayasa Perangkat Lunak
+                        </h3>
 
                         <p>
                             Mempelajari pemrograman,
@@ -441,13 +661,19 @@
 
                 <div class="timeline-item">
 
-                    <div class="timeline-dot">🪸</div>
+                    <div class="timeline-dot">
+                        🪸
+                    </div>
 
                     <div class="glass timeline-card">
 
-                        <span>Learning</span>
+                        <span>
+                            Learning
+                        </span>
 
-                        <h3>Web Development</h3>
+                        <h3>
+                            Web Development
+                        </h3>
 
                         <p>
                             Mengembangkan kemampuan HTML,
@@ -461,13 +687,19 @@
 
                 <div class="timeline-item">
 
-                    <div class="timeline-dot">🌊</div>
+                    <div class="timeline-dot">
+                        🌊
+                    </div>
 
                     <div class="glass timeline-card">
 
-                        <span>Future</span>
+                        <span>
+                            Future
+                        </span>
 
-                        <h3>Explore More</h3>
+                        <h3>
+                            Explore More
+                        </h3>
 
                         <p>
                             Terus belajar, berkembang,
@@ -484,19 +716,31 @@
         </section>
 
 
+        <!-- CONTACT -->
         <section class="section" id="contact">
 
             <div class="title">
+
                 <span>🐚</span>
-                <h2>Let's <b>Connect</b></h2>
-                <p>Send a message across the ocean</p>
+
+                <h2>
+                    Let's <b>Connect</b>
+                </h2>
+
+                <p>
+                    Send a message across the ocean
+                </p>
+
             </div>
+
 
             <div class="glass contact">
 
                 <div class="contact-info">
 
-                    <h3>Find Me Under The Sea 🌊</h3>
+                    <h3>
+                        Find Me Under The Sea 🌊
+                    </h3>
 
                     <p>
                         Tertarik untuk berkenalan atau
@@ -504,19 +748,37 @@
                         saya melalui form di samping.
                     </p>
 
+
                     <div class="contact-detail">
+
                         <span>📧</span>
-                        <p>ayucristiana5@gmail.com</p>
+
+                        <p>
+                            Email
+                        </p>
+
                     </div>
 
+
                     <div class="contact-detail">
+
                         <span>📱</span>
-                        <p>Indonesia</p>
+
+                        <p>
+                            Indonesia
+                        </p>
+
                     </div>
 
+
                     <div class="contact-detail">
+
                         <span>💻</span>
-                        <p>Web Developer</p>
+
+                        <p>
+                            Web Developer
+                        </p>
+
                     </div>
 
                 </div>
@@ -540,6 +802,7 @@
 
                     <textarea
                         id="message"
+                        rows="5"
                         placeholder="Tulis pesan..."
                         required
                     ></textarea>
@@ -557,18 +820,31 @@
     </main>
 
 
+    <!-- FOOTER -->
     <footer>
 
-        <h2>🌊 Ayu.</h2>
+        <h2>
+            🌊 Ayu.
+        </h2>
 
         <p>
             Diving into creativity, one project at a time.
         </p>
 
         <div class="social">
-            <a href="#">Instagram</a>
-            <a href="#">GitHub</a>
-            <a href="#">LinkedIn</a>
+
+            <a href="#">
+                Instagram
+            </a>
+
+            <a href="#">
+                GitHub
+            </a>
+
+            <a href="#">
+                LinkedIn
+            </a>
+
         </div>
 
         <small>
@@ -578,32 +854,18 @@
     </footer>
 
 
+    <!-- MODAL -->
     <div class="modal" id="modal">
 
         <div class="glass modal-box">
 
-            <button id="closeModal">×</button>
-
-            <div class="modal-icon">🌊</div>
-
-            <h2 id="modalTitle">Project</h2>
-
-            <p>
-                Project ini merupakan salah satu karya
-                dalam perjalanan saya mempelajari
-                web development.
-            </p>
-
-            <button id="modalCloseBtn">
-                Close
+            <button id="closeModal">
+                ×
             </button>
 
-        </div>
+            <div class="modal-icon">
+                🌊
+            </div>
 
-    </div>
-
-
-    <script src="script.js"></script>
-
-</body>
-    </html>
+            <h2 id="modalTitle">
+           
